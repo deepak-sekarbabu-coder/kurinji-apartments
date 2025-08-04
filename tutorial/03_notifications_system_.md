@@ -1,6 +1,6 @@
 # Chapter 3: Notifications System
 
-Welcome back to the Unicorn Properties development guide! In our [previous chapter](02_user_authentication___roles_.md), we explored how the system knows _who you are_ and _what you're allowed to do_ through User Authentication & Roles. And before that, in [Chapter 1: Expense Management & Logic](01_expense_management___logic_.md), we learned how the app manages all the shared bills.
+Welcome back to the Kurinji Apartments development guide! In our [previous chapter](02_user_authentication___roles_.md), we explored how the system knows _who you are_ and _what you're allowed to do_ through User Authentication & Roles. And before that, in [Chapter 1: Expense Management & Logic](01_expense_management___logic_.md), we learned how the app manages all the shared bills.
 
 But now, imagine this: Apartment T2 just paid a big electricity bill, or maybe an admin has an important update about a building-wide maintenance. How does the app tell _everyone_ about these crucial events? How do you get a heads-up even if you're not actively looking at the app?
 
@@ -360,13 +360,13 @@ fetch('/firebase-config.json')
   });
 ```
 
-This is the heart of push notifications. This `serviceWorker.js` file, which is registered by the `requestNotificationPermission` function, waits in the background. When FCM sends a message for your device, this service worker "wakes up" and uses `self.registration.showNotification` to display the pop-up notification on your screen, even if your browser tab for Unicorn Properties is closed!
+This is the heart of push notifications. This `serviceWorker.js` file, which is registered by the `requestNotificationPermission` function, waits in the background. When FCM sends a message for your device, this service worker "wakes up" and uses `self.registration.showNotification` to display the pop-up notification on your screen, even if your browser tab for Kurinji Apartments is closed!
 
 ---
 
 ### Conclusion
 
-In this chapter, you've learned about the "Notifications System," which acts as the vital communication hub for Unicorn Properties. We covered:
+In this chapter, you've learned about the "Notifications System," which acts as the vital communication hub for Kurinji Apartments. We covered:
 
 - The problem it solves: keeping everyone informed with real-time updates.
 - The role of **Firebase Cloud Messaging (FCM)** as our "digital postman."

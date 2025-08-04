@@ -1,6 +1,6 @@
 # Chapter 1: Expense Management & Logic
 
-Welcome to the first chapter of our Unicorn Properties development guide! In this chapter, we're going to dive into the core "brain" of our apartment management system: **Expense Management & Logic**.
+Welcome to the first chapter of our Kurinji Apartments development guide! In this chapter, we're going to dive into the core "brain" of our apartment management system: **Expense Management & Logic**.
 
 Imagine living in an apartment complex where everyone shares certain bills, like electricity for common areas or cleaning services. It can be tricky to keep track of who paid what, who owes whom, and how much is still outstanding. This is where our "Expense Management & Logic" system comes in – it's like having a super smart, automatic financial calculator and a very meticulous accountant rolled into one!
 
@@ -305,7 +305,7 @@ Here are its key functions:
 
 ### Conclusion
 
-In this chapter, you've learned about the "Expense Management & Logic" system, which acts as the financial calculator and meticulous accountant for Unicorn Properties. We covered:
+In this chapter, you've learned about the "Expense Management & Logic" system, which acts as the financial calculator and meticulous accountant for Kurinji Apartments. We covered:
 
 - The problem it solves: fairly splitting shared costs and tracking payments.
 - How it automatically splits bills among 7 apartments, excluding the payer's share.

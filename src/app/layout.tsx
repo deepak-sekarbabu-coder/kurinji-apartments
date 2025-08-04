@@ -8,7 +8,7 @@ import { ToastProvider } from '@/components/ui/toast-provider';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Unicorn Properties',
+  title: 'Kurinji Apartments',
   description: 'Manage and track property expenses seamlessly.',
   icons: {
     icon: '/favicon.ico',
@@ -36,8 +36,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://firebase.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://unicorndev-b532a.firebaseapp.com" />
-        <link rel="dns-prefetch" href="https://unicorndev-b532a.firebaseapp.com" />
+        <link rel="preconnect" href="https://kurinjiapartmentsprod.firebaseapp.com" />
+        <link rel="dns-prefetch" href="https://kurinjiapartmentsprod.firebaseapp.com" />
         <link rel="preconnect" href="https://apis.google.com" />
         <link rel="dns-prefetch" href="https://apis.google.com" />
         <script

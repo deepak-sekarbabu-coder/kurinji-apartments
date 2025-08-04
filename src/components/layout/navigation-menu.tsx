@@ -62,14 +62,14 @@ export function NavigationMenu({ user, view, setView, role }: NavigationMenuProp
           >
             <Image
               src="/unicorn-logo.png"
-              alt="Unicorn Properties Logo"
+              alt="Kurinji Apartments Logo"
               width={24}
               height={24}
               className="object-contain rounded bg-white flex-shrink-0"
               priority
               unoptimized
             />
-            <span className="text-sm font-semibold truncate">Unicorn Properties</span>
+            <span className="text-sm font-semibold truncate">Kurinji Apartments</span>
           </div>
           <div className="flex-shrink-0">
             <ThemeSwitch />

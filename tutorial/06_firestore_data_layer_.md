@@ -1,6 +1,6 @@
 # Chapter 6: Firestore Data Layer
 
-Welcome back to the Unicorn Properties development guide! In our [previous chapter](05_central_application_orchestration_.md), we explored **Central Application Orchestration**, learning how the `UnicornPropertiesApp` acts as the "conductor" to bring all the different parts of our application—like expense management, user authentication, notifications, and UI components—together. It orchestrates what you see and how the app reacts to your actions.
+Welcome back to the Kurinji Apartments development guide! In our [previous chapter](05_central_application_orchestration_.md), we explored **Central Application Orchestration**, learning how the `UnicornPropertiesApp` acts as the "conductor" to bring all the different parts of our application—like expense management, user authentication, notifications, and UI components—together. It orchestrates what you see and how the app reacts to your actions.
 
 But now, a crucial question arises: where does all the application's information, such as expense details, user profiles, categories, or apartment data, actually live? When you add a new expense, where does it get stored? And how does the app always know the latest list of users or expenses, even if someone else updates them?
 
@@ -8,7 +8,7 @@ That's where the **Firestore Data Layer** comes in!
 
 ## What Problem Does This Solve?
 
-Imagine our Unicorn Properties application is a busy office, and all the important records (like bills, tenant lists, and maintenance requests) are stored in a giant, organized **filing cabinet**. Instead of every person in the office going directly to the cabinet, asking for specific files, and putting them back, there's a dedicated **librarian** or **filing manager**.
+Imagine our Kurinji Apartments application is a busy office, and all the important records (like bills, tenant lists, and maintenance requests) are stored in a giant, organized **filing cabinet**. Instead of every person in the office going directly to the cabinet, asking for specific files, and putting them back, there's a dedicated **librarian** or **filing manager**.
 
 This "librarian" is our **Firestore Data Layer**. It solves the problem of:
 
@@ -30,7 +30,7 @@ Our Firestore Data Layer system is built on a few core ideas:
    - Think of it as a dedicated "translator" between your app's logic (like `addExpense` or `markApartmentAsPaid`) and the database. Your app tells the Data Layer what it wants to do, and the Data Layer figures out how to talk to the database.
 
 2. **Firestore: The Database Behind the Scenes**
-   - Unicorn Properties uses **Google Cloud Firestore**. It's a "NoSQL" database provided by Google.
+   - Kurinji Apartments uses **Google Cloud Firestore**. It's a "NoSQL" database provided by Google.
    - **NoSQL** means it's not like traditional spreadsheets with rows and columns. Instead, it stores data as flexible "documents" within "collections."
    - **Cloud Database** means it lives online, not on your computer. This makes it easy for many users to access the same data from anywhere in the world.
 
@@ -41,7 +41,7 @@ Our Firestore Data Layer system is built on a few core ideas:
 
    | Analogy             | Firestore Term   | Example                                  |
    | :------------------ | :--------------- | :--------------------------------------- |
-   | Filing Cabinet      | **Firestore DB** | All Unicorn Properties data              |
+   | Filing Cabinet      | **Firestore DB** | All Kurinji Apartments data              |
    | Main Folder         | **Collection**   | `expenses`, `users`, `categories`        |
    | Individual File     | **Document**     | One specific expense, one user's profile |
    | Information in File | **Fields**       | `amount`, `description`, `email`, `role` |
@@ -176,9 +176,9 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration (these are public, safe to share)
 const firebaseConfig = {
-  apiKey: 'AIzaSyA7g7daznFO-dDWYv8-jT08DDZlJSFT1lE',
-  authDomain: 'unicorndev-b532a.firebaseapp.com',
-  projectId: 'unicorndev-b532a',
+  apiKey: 'TEST-dDWYv8-jT08DDZlJSFT1lE',
+  authDomain: 'Test-b532a.firebaseapp.com',
+  projectId: 'Test-b532a',
   // ... other config details ...
 };
 
@@ -313,7 +313,7 @@ When an admin creates an announcement, this backend route uses `getFirestore(adm
 
 ### Conclusion
 
-In this chapter, you've learned about the **Firestore Data Layer**, which acts as the central filing cabinet and smart librarian for all the Unicorn Properties application's information. We covered:
+In this chapter, you've learned about the **Firestore Data Layer**, which acts as the central filing cabinet and smart librarian for all the Kurinji Apartments application's information. We covered:
 
 - The problem it solves: providing a consistent, real-time, and organized way to manage all app data.
 - The role of **Google Cloud Firestore** as our cloud database.

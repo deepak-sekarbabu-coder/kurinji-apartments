@@ -1,8 +1,8 @@
-# Copilot Instructions for Unicorn Properties
+# Copilot Instructions for Kurinji Apartments
 
 ## Project Overview
 
-Unicorn Properties is a Next.js (App Router) web app for managing shared apartment expenses, user roles, and notifications. It is designed for a 7-apartment community, with advanced expense division, outstanding balance tracking, dual role system (auth/property), admin panel, push notifications, and analytics.
+Kurinji Apartments is a Next.js (App Router) web app for managing shared apartment expenses, user roles, and notifications. It is designed for a 7-apartment community, with advanced expense division, outstanding balance tracking, dual role system (auth/property), admin panel, push notifications, and analytics.
 
 ## Architecture & Data Flow
 

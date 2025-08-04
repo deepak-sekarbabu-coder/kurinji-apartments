@@ -1,10 +1,10 @@
-# Unicorn Properties — User Guide
+# Kurinji Apartments — User Guide
 
-Welcome! This guide explains how to use Unicorn Properties to manage shared apartment expenses, roles, and notifications.
+Welcome! This guide explains how to use Kurinji Apartments to manage shared apartment expenses, roles, and notifications.
 
 ## Overview
 
-Unicorn Properties is a web app for 7-apartment communities. It tracks who paid for what, splits expenses, manages roles, and keeps everyone informed with announcements and push notifications.
+Kurinji Apartments is a web app for 7-apartment communities. It tracks who paid for what, splits expenses, manages roles, and keeps everyone informed with announcements and push notifications.
 
 ## Getting Started
 

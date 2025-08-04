@@ -1,6 +1,6 @@
-# Unicorn Properties Developer Documentation
+# Kurinji Apartments Developer Documentation
 
-Welcome, developer! This guide provides a technical overview of the Unicorn Properties application to help you get started with the codebase quickly.
+Welcome, developer! This guide provides a technical overview of the Kurinji Apartments application to help you get started with the codebase quickly.
 
 ## 1. Tech Stack
 

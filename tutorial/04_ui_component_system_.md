@@ -1,8 +1,8 @@
 # Chapter 4: UI Component System
 
-Welcome back to the Unicorn Properties development guide! In our [previous chapter](03_notifications_system_.md), we learned how the Notifications System keeps everyone informed with real-time updates and announcements. Before that, we explored User Authentication & Roles in [Chapter 2](02_user_authentication___roles_.md) and the core Expense Management & Logic in [Chapter 1](01_expense_management___logic_.md).
+Welcome back to the Kurinji Apartments development guide! In our [previous chapter](03_notifications_system_.md), we learned how the Notifications System keeps everyone informed with real-time updates and announcements. Before that, we explored User Authentication & Roles in [Chapter 2](02_user_authentication___roles_.md) and the core Expense Management & Logic in [Chapter 1](01_expense_management___logic_.md).
 
-Now, let's switch gears and think about how the Unicorn Properties app _looks_ and _feels_. Have you noticed how all the buttons, forms, and dialog boxes have a similar, clean style? How does the app achieve this consistent, polished appearance without developers having to design every single piece from scratch?
+Now, let's switch gears and think about how the Kurinji Apartments app _looks_ and _feels_. Have you noticed how all the buttons, forms, and dialog boxes have a similar, clean style? How does the app achieve this consistent, polished appearance without developers having to design every single piece from scratch?
 
 That's where the **UI Component System** comes in!
 
@@ -33,14 +33,14 @@ Our UI Component System is built on a few core ideas:
    - They encapsulate both how they look (their styling) and how they behave (their interactivity).
 
 2. **ShadCN UI: Our Pre-built LEGO Bricks**
-   - Unicorn Properties uses a set of pre-built components known as **ShadCN UI**.
+   - Kurinji Apartments uses a set of pre-built components known as **ShadCN UI**.
    - Think of ShadCN UI as a high-quality collection of standard LEGO pieces: buttons, forms, dropdowns, dialogs, and more.
    - These components are built on top of **Radix UI**, which provides the _functionality_ (like making sure a dropdown opens correctly) without any _styling_. This gives us a lot of flexibility!
 
 3. **Tailwind CSS: Painting the LEGO Bricks**
    - **Tailwind CSS** is our styling tool. Instead of writing custom CSS rules, Tailwind provides a huge library of pre-defined "utility classes" that you apply directly to your HTML elements (or components).
    - For example, instead of `background-color: blue; padding: 10px; border-radius: 5px;`, you might write `<button class="bg-blue-500 p-2 rounded-md">`.
-   - This is how we "paint" our ShadCN UI components and make them match Unicorn Properties' specific look and feel.
+   - This is how we "paint" our ShadCN UI components and make them match Kurinji Apartments' specific look and feel.
 
 ---
 
@@ -122,7 +122,7 @@ sequenceDiagram
     Designer->>Developer: 1. "We need a consistent button style!"
     Developer->>ShadCN: 2. "I'll use the 'Button' component."
     ShadCN->>Developer: 3. Provides basic, unstyled Button functionality
-    Developer->>Tailwind: 4. "Apply Unicorn Properties styles to this button."
+    Developer->>Tailwind: 4. "Apply Kurinji Apartments styles to this button."
     Tailwind-->>ShadCN: 5. Generates utility classes (e.g., `bg-primary`, `rounded-md`)
     ShadCN->>Browser: 6. Renders fully styled Button to screen
     Browser->>Developer: 7. User sees consistent UI
@@ -298,7 +298,7 @@ This `tailwind.config.ts` file maps simple names like `primary` and `destructive
     /* These are CSS variables for light mode */
     --background: 0 0% 96%;
     --foreground: 222.2 84% 4.9%;
-    --primary: 202 70% 40%; /* Unicorn Properties Blue! */
+    --primary: 202 70% 40%; /* Kurinji Apartments Blue! */
     --primary-foreground: 210 40% 98%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -359,7 +359,7 @@ These components demonstrate how the system can be extended and customized while
 
 ### Conclusion
 
-In this chapter, you've learned about the "UI Component System," which acts as the LEGO set for building the Unicorn Properties application's interface. We covered:
+In this chapter, you've learned about the "UI Component System," which acts as the LEGO set for building the Kurinji Apartments application's interface. We covered:
 
 - The problem it solves: ensuring a consistent, fast, and easy-to-build/maintain user interface.
 - The role of **UI Components** as reusable building blocks.

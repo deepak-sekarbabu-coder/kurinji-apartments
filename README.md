@@ -1,6 +1,6 @@
-# Unicorn Properties
+# Kurinji Apartments
 
-Unicorn Properties is a modern web application for managing shared apartment expenses, user roles, notifications, and community engagement in a 7-apartment complex.
+Kurinji Apartments is a modern web application for managing shared apartment expenses, user roles, notifications, and community engagement in a 5-apartment complex.
 
 Features:
 

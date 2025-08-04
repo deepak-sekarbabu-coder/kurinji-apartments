@@ -26,21 +26,48 @@ export async function POST(request: NextRequest) {
       const adminApp = getFirebaseAdminApp();
 
       // First verify the idToken is valid
-      const decodedToken = await getAuth(adminApp).verifyIdToken(idToken);
-      console.log('✅ ID token verified for UID:', decodedToken.uid);
+      let decodedToken;
+      try {
+        decodedToken = await getAuth(adminApp).verifyIdToken(idToken);
+        console.log('✅ ID token verified for UID:', decodedToken.uid);
+        console.log('Decoded token:', decodedToken);
+      } catch (verifyError) {
+        console.error('ID token verification failed:', verifyError);
+        return NextResponse.json(
+          {
+            status: 'error',
+            message: 'ID token verification failed',
+            details: verifyError,
+          },
+          { status: 401 }
+        );
+      }
 
-      const sessionCookie = await getAuth(adminApp).createSessionCookie(idToken, { expiresIn });
+      try {
+        const sessionCookie = await getAuth(adminApp).createSessionCookie(idToken, { expiresIn });
 
-      const cookieStore = await cookies();
-      cookieStore.set('session', sessionCookie, {
-        maxAge: expiresIn,
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
-        path: '/',
-      });
+        const cookieStore = await cookies();
+        cookieStore.set('session', sessionCookie, {
+          maxAge: expiresIn,
+          httpOnly: true,
+          secure: process.env.NODE_ENV === 'production',
+          sameSite: 'lax',
+          path: '/',
+        });
 
-      return NextResponse.json({ status: 'success' });
+        return NextResponse.json({ status: 'success' });
+      } catch (sessionError) {
+        console.error('Session cookie creation failed:', sessionError);
+        return NextResponse.json(
+          {
+            status: 'error',
+            message: 'Session cookie creation failed',
+            details: sessionError,
+            decodedToken,
+          },
+          { status: 401 }
+        );
+      }
     } catch (adminError: unknown) {
       console.error('Firebase Admin SDK Error:', adminError);
       console.error('Error code:', (adminError as { code?: string })?.code);
@@ -56,41 +83,35 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      // Fallback: Set a simple cookie with the idToken for development
-      // This is NOT secure for production but allows development to continue
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('Using development fallback for session cookie');
-        const cookieStore = await cookies();
-        cookieStore.set('session', idToken, {
-          maxAge: expiresIn,
-          httpOnly: true,
-          secure: false,
-          sameSite: 'lax',
-          path: '/',
-        });
-
-        // Also set a simple user-role cookie for the dashboard
-        cookieStore.set('user-role', 'user', {
-          maxAge: expiresIn,
-          httpOnly: false,
-          secure: false,
-          sameSite: 'lax',
-          path: '/',
-        });
-
-        return NextResponse.json({ status: 'success', message: 'Development session created' });
-      }
-
-      throw adminError;
+      // Remove fallback: Do NOT set session cookie to idToken
+      // Instead, return an error and do not set any session cookie
+      return NextResponse.json(
+        {
+          status: 'error',
+          message: 'Failed to create session cookie. Please sign in again.',
+        },
+        { status: 401 }
+      );
     }
   } catch (error: unknown) {
     console.error('SESSION_CREATION_ERROR:', error);
     // Ensure a helpful message is returned, including the error code if available
-    const err = error as { code?: string; message?: string };
-    const errorMessage = err.code
-      ? `(${err.code}) ${err.message}`
-      : err.message || 'Failed to create session.';
-    return NextResponse.json({ status: 'error', message: errorMessage }, { status: 401 });
+    let errorMessage = 'Failed to create session.';
+    let errorDetails = {};
+    if (error && typeof error === 'object') {
+      errorDetails = error;
+      if ((error as any).code || (error as any).message) {
+        errorMessage =
+          ((error as any).code ? `(${(error as any).code}) ` : '') +
+          ((error as any).message || errorMessage);
+      }
+    } else if (typeof error === 'string') {
+      errorMessage = error;
+    }
+    return NextResponse.json(
+      { status: 'error', message: errorMessage, details: errorDetails },
+      { status: 401 }
+    );
   }
 }
 

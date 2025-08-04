@@ -9,14 +9,14 @@ export default function LoginPage() {
         <div className="flex flex-col items-center">
           <Image
             src="/unicorn-logo.png"
-            alt="Unicorn Properties Logo"
+            alt="Kurinji Apartments Logo"
             width={48}
             height={48}
             className="object-contain rounded bg-white mb-2"
             priority
             unoptimized
           />
-          <h1 className="text-2xl font-semibold tracking-tight">Welcome to Unicorn Properties</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">Welcome to Kurinji Apartments</h1>
           <p className="text-sm text-muted-foreground">Sign in to your account</p>
         </div>
         <LoginForm />

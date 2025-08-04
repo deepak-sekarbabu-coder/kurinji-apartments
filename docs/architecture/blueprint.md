@@ -1,4 +1,4 @@
-# Unicorn Properties Blueprint
+# Kurinji Apartments Blueprint
 
 ## Core Features
 

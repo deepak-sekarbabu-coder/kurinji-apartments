@@ -182,7 +182,7 @@ export function DashboardView({
             <div className="flex items-center gap-4">
               <Bell className="h-6 w-6 text-accent" />
               <div className="grid gap-1">
-                <p className="text-sm font-medium">Welcome to Unicorn Properties, {user?.name}!</p>
+                <p className="text-sm font-medium">Welcome to Kurinji Apartments, {user?.name}!</p>
                 <p className="text-sm text-muted-foreground">Here is a summary of your account.</p>
               </div>
             </div>

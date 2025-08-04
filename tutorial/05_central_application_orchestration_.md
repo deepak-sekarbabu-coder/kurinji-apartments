@@ -1,6 +1,6 @@
 # Chapter 5: Central Application Orchestration
 
-Welcome back to the Unicorn Properties development guide! In our [previous chapter](04_ui_component_system_.md), we learned about the **UI Component System** and how it provides us with reusable "LEGO bricks" to build beautiful and consistent user interfaces. We saw how individual buttons, forms, and dialogs are crafted.
+Welcome back to the Kurinji Apartments development guide! In our [previous chapter](04_ui_component_system_.md), we learned about the **UI Component System** and how it provides us with reusable "LEGO bricks" to build beautiful and consistent user interfaces. We saw how individual buttons, forms, and dialogs are crafted.
 
 But now, a bigger question arises: How do all these individual pieces – the expense management logic from [Chapter 1](01_expense_management___logic_.md), the user authentication from [Chapter 2](02_user_authentication___roles_.md), the notification system from [Chapter 3](03_notifications_system_.md), and the UI components from [Chapter 4](04_ui_component_system_.md) – come together to form a single, coherent, and functional application? Who is the conductor that makes this entire orchestra play in harmony?
 
@@ -8,7 +8,7 @@ That's where **Central Application Orchestration** comes in!
 
 ## What Problem Does This Solve?
 
-Imagine our Unicorn Properties application is a grand orchestra. We have many talented musicians (the different parts of our app, like expense tracking or user login) and beautiful instruments (our UI components). But without a conductor, everyone would play their own tune, and it would be chaos!
+Imagine our Kurinji Apartments application is a grand orchestra. We have many talented musicians (the different parts of our app, like expense tracking or user login) and beautiful instruments (our UI components). But without a conductor, everyone would play their own tune, and it would be chaos!
 
 Central Application Orchestration is like the **conductor** of our application. It solves the problem of:
 
@@ -17,7 +17,7 @@ Central Application Orchestration is like the **conductor** of our application. 
 3. **Managing All the Data:** It pulls together all the different types of information (like details about users, expenses, and categories) and makes sure they are available wherever they're needed.
 4. **Handling Global Actions:** It manages big actions that affect multiple parts of the app, such as adding an expense or updating a user's profile.
 
-**Central Use Case:** Let's say a user from Apartment T2 opens the Unicorn Properties app. The system needs to:
+**Central Use Case:** Let's say a user from Apartment T2 opens the Kurinji Apartments app. The system needs to:
 
 - First, confirm it's really them (using [User Authentication & Roles](02_user_authentication___roles_.md)).
 - If it's their very first time, prompt them to complete their profile (another part of [User Authentication & Roles](02_user_authentication___roles_.md)).
@@ -71,6 +71,8 @@ import { useEffect } from 'react';
 
 // Checks login status
 import { useRouter } from 'next/navigation';
+
+// From src/app/page.tsx (simplified)
 
 // From src/app/page.tsx (simplified)
 
@@ -143,6 +145,8 @@ import * as React from 'react';
 // Get current user
 import * as firestore from '@/lib/firestore';
 import type { Apartment, Category, Expense, User, View } from '@/lib/types';
+
+// From src/components/unicorn-properties-app.tsx (simplified - state & data fetching)
 
 // From src/components/unicorn-properties-app.tsx (simplified - state & data fetching)
 
@@ -377,7 +381,7 @@ Components like `src/components/layout/page-header.tsx` and `src/components/layo
 
 ### Conclusion
 
-In this chapter, you've learned about **Central Application Orchestration**, the crucial "conductor" that brings all parts of the Unicorn Properties application together. We covered:
+In this chapter, you've learned about **Central Application Orchestration**, the crucial "conductor" that brings all parts of the Kurinji Apartments application together. We covered:
 
 - The core problem it solves: coordinating data, views, and actions across the entire application.
 - The role of the `UnicornPropertiesApp` component as the central brain managing global state and actions.

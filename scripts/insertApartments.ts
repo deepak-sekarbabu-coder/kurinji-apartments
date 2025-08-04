@@ -4,7 +4,7 @@ import { db } from '../src/lib/firebase';
 
 const insertApartments = async () => {
   const apartmentsCol = collection(db, 'apartments');
-  const apartmentIds = ['G1', 'F1', 'F2', 'S1', 'S2', 'T1', 'T2'];
+  const apartmentIds = ['F1', 'F2', 'S1', 'S2', 'S3'];
 
   try {
     for (const id of apartmentIds) {

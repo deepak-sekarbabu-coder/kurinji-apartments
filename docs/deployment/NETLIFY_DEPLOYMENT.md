@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide explains how to deploy the Unicorn Properties Next.js application to Netlify.
+This guide explains how to deploy the Kurinji Apartments Next.js application to Netlify.
 
 ## Prerequisites
 

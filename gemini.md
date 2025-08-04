@@ -1,10 +1,10 @@
-# Gemini Project Analysis: Unicorn Properties
+# Gemini Project Analysis: Kurinji Apartments
 
-This document provides a comprehensive analysis of the Unicorn Properties project, designed to guide development and interaction with the codebase.
+This document provides a comprehensive analysis of the Kurinji Apartments project, designed to guide development and interaction with the codebase.
 
 ## 1. Project Overview
 
-Unicorn Properties is a full-stack web application built to manage shared living spaces, focusing on expense tracking, user management, and community engagement for a 7-apartment complex. It features a robust system for dividing expenses, tracking payments, managing user roles, and sending real-time notifications. The application is built with a modern tech stack and is deployed on Netlify.
+Kurinji Apartments is a full-stack web application built to manage shared living spaces, focusing on expense tracking, user management, and community engagement for a 7-apartment complex. It features a robust system for dividing expenses, tracking payments, managing user roles, and sending real-time notifications. The application is built with a modern tech stack and is deployed on Netlify.
 
 - **Primary Goal**: Simplify apartment management by automating expense calculations, centralizing communication, and providing clear financial visibility for all residents.
 - **Key Stakeholders**: Residents (tenants/owners) and Property Admins.

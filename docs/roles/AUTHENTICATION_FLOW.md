@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes the complete authentication flow for Unicorn Properties, including first-time and existing users, role-based redirection and onboarding.
+This document describes the complete authentication flow for Kurinji Apartments, including first-time and existing users, role-based redirection and onboarding.
 
 ## User Authentication Flow
 

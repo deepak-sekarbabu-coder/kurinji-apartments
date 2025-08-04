@@ -1,12 +1,12 @@
 # Chapter 2: User Authentication & Roles
 
-Welcome back to the Unicorn Properties development guide! In our [previous chapter](01_expense_management___logic_.md), we learned how the system acts like a super-smart accountant, helping us track and split shared expenses among apartments.
+Welcome back to the Kurinji Apartments development guide! In our [previous chapter](01_expense_management___logic_.md), we learned how the system acts like a super-smart accountant, helping us track and split shared expenses among apartments.
 
 But as you might have wondered, "How does the system know _who_ is Apartment T2 or T1? And who is even _allowed_ to mark a payment as 'paid'?" That's where **User Authentication & Roles** comes in!
 
 ## What Problem Does This Solve?
 
-Imagine our Unicorn Properties application is like an exclusive club. You can't just walk in; you need to be a member and show your ID. And once inside, not everyone has the same access – some are regular guests, while others might be VIPs or even club managers.
+Imagine our Kurinji Apartments application is like an exclusive club. You can't just walk in; you need to be a member and show your ID. And once inside, not everyone has the same access – some are regular guests, while others might be VIPs or even club managers.
 
 This system solves the problem of:
 
@@ -31,7 +31,7 @@ Our Authentication & Roles system is built on a few core ideas:
 
 2. **Roles (Your Access Pass):**
    - Once you're authenticated, the system knows your "role," which dictates what you can see and do within the application.
-   - Unicorn Properties uses **two types of roles** to give us flexibility:
+   - Kurinji Apartments uses **two types of roles** to give us flexibility:
 
    | Role Type         | What it Defines                                    | Examples                   | Who manages it?                          |
    | :---------------- | :------------------------------------------------- | :------------------------- | :--------------------------------------- |
@@ -64,7 +64,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center">
       <div className="w-full max-w-sm">
         <Image src="/unicorn-logo.png" alt="Logo" width={48} height={48} />
-        <h1 className="text-2xl font-semibold">Welcome to Unicorn Properties</h1>
+        <h1 className="text-2xl font-semibold">Welcome to Kurinji Apartments</h1>
         <p className="text-sm text-muted-foreground">Sign in to your account</p>
         <LoginForm /> {/* This is where you type your email/password or use Google */}
       </div>
@@ -262,7 +262,7 @@ This diagram illustrates the journey from a new user trying to log in, through g
 
 ### Conclusion
 
-In this chapter, you've learned about the "User Authentication & Roles" system, which acts as the bouncer and ID checker for Unicorn Properties. We covered:
+In this chapter, you've learned about the "User Authentication & Roles" system, which acts as the bouncer and ID checker for Kurinji Apartments. We covered:
 
 - The crucial problem it solves: identifying users and controlling their access.
 - The difference between **Authentication** (who you are) and **Roles** (what you can do).
@@ -270,7 +270,7 @@ In this chapter, you've learned about the "User Authentication & Roles" system, 
 - The **onboarding process** for new users to set up their apartment and property role.
 - How core parts of the application like `AuthContext` and `ProtectedRoute` work behind the scenes to manage your identity and access.
 
-This system is fundamental to ensuring the security and proper functioning of the Unicorn Properties application, making sure only authorized users can perform actions like adding expenses or marking payments, as discussed in [Chapter 1: Expense Management & Logic](01_expense_management___logic_.md).
+This system is fundamental to ensuring the security and proper functioning of the Kurinji Apartments application, making sure only authorized users can perform actions like adding expenses or marking payments, as discussed in [Chapter 1: Expense Management & Logic](01_expense_management___logic_.md).
 
 Next, you might wonder, "How does the app tell users when an expense is due or when someone has marked a payment?" That brings us to our next chapter: [Notifications System](03_notifications_system_.md), where we'll explore how the app keeps everyone informed!
 

@@ -1,6 +1,6 @@
 # Chapter 7: Data Models & Types
 
-Welcome back to the Unicorn Properties development guide! In our [previous chapter](06_firestore_data_layer_.md), we went deep into the **Firestore Data Layer**, discovering where all our application's information (like expenses, users, and notifications) is securely stored and how it updates in real-time. We saw the "filing cabinet" and the "librarian" that manages all the data.
+Welcome back to the Kurinji Apartments development guide! In our [previous chapter](06_firestore_data_layer_.md), we went deep into the **Firestore Data Layer**, discovering where all our application's information (like expenses, users, and notifications) is securely stored and how it updates in real-time. We saw the "filing cabinet" and the "librarian" that manages all the data.
 
 But now, a crucial question remains: How does our application know the exact _shape_ of the files inside that filing cabinet? How does it make sure that an "Expense" always has an `amount` and a `description`, and that a "User" always has an `email` and an `apartment`? What if someone accidentally tries to save a "User" without an `email`? How do we prevent these kinds of errors?
 
@@ -10,7 +10,7 @@ That's where **Data Models & Types** come in!
 
 Imagine you're an architect designing a building. Before any construction begins, you create detailed **blueprints**. These blueprints show exactly where every wall, door, and window goes, what materials to use, and how big everything should be. If a builder tries to put a door where a wall is supposed to be, the blueprint immediately flags that mistake.
 
-In a TypeScript project like Unicorn Properties, **Data Models** are like these architectural blueprints for all the information our app uses. They strictly define the `shape` and `content` of every piece of data.
+In a TypeScript project like Kurinji Apartments, **Data Models** are like these architectural blueprints for all the information our app uses. They strictly define the `shape` and `content` of every piece of data.
 
 This system solves the problem of:
 
@@ -154,7 +154,7 @@ Let's peek behind the curtain to understand how TypeScript enforces these bluepr
 sequenceDiagram
     participant D as Developer
     participant TS as TypeScript Compiler (VS Code)
-    participant App as Unicorn Properties Application
+    participant App as Kurinji Apartments Application
 
     D->>D: 1. Writes code using `Expense` or `User` types
     Note over D: e.g., `const myExpense: Expense = { ... };`
@@ -175,7 +175,7 @@ sequenceDiagram
 
 #### The Blueprint Hub: `src/lib/types.ts`
 
-This single file, `src/lib/types.ts`, serves as the central repository for _all_ the data models in our Unicorn Properties application. It contains the `export type` definitions for every major piece of information the app handles.
+This single file, `src/lib/types.ts`, serves as the central repository for _all_ the data models in our Kurinji Apartments application. It contains the `export type` definitions for every major piece of information the app handles.
 
 **Example `Notification` Type:**
 
@@ -237,7 +237,7 @@ While the types are defined in `src/lib/types.ts`, it's the `tsconfig.json` file
 
 ### Conclusion
 
-In this chapter, you've learned about **Data Models & Types**, which are the fundamental blueprints for all information in the Unicorn Properties application. We covered:
+In this chapter, you've learned about **Data Models & Types**, which are the fundamental blueprints for all information in the Kurinji Apartments application. We covered:
 
 - The problem it solves: ensuring data consistency, preventing errors, and making code clear and reliable.
 - The concept of **Data Models** as architectural blueprints for data.
@@ -245,9 +245,9 @@ In this chapter, you've learned about **Data Models & Types**, which are the fun
 - How `src/lib/types.ts` is the central hub for all our data definitions, including `Expense`, `User`, and `Notification`.
 - The role of `tsconfig.json` in configuring the TypeScript compiler to enforce these rules, especially with `"strict": true`.
 
-This strong foundation in data modeling is crucial for the stability and maintainability of Unicorn Properties, making sure that every piece of information flows through the app reliably, from the moment an expense is added ([Chapter 1](01_expense_management___logic_.md)) to its storage in Firestore ([Chapter 6](06_firestore_data_layer_.md)), and its display on the user interface ([Chapter 4](04_ui_component_system_.md)).
+This strong foundation in data modeling is crucial for the stability and maintainability of Kurinji Apartments, making sure that every piece of information flows through the app reliably, from the moment an expense is added ([Chapter 1](01_expense_management___logic_.md)) to its storage in Firestore ([Chapter 6](06_firestore_data_layer_.md)), and its display on the user interface ([Chapter 4](04_ui_component_system_.md)).
 
-This concludes our beginner-friendly tutorial series on the core concepts behind the `unicorn-properties-dev` project. We've journeyed from understanding shared expense logic to managing users, sending notifications, building responsive UIs, orchestrating the entire application, handling data storage, and finally, defining the very structure of our data. We hope this guide has given you a solid understanding of how the different parts of Unicorn Properties work together to create a powerful and reliable application!
+This concludes our beginner-friendly tutorial series on the core concepts behind the `unicorn-properties-dev` project. We've journeyed from understanding shared expense logic to managing users, sending notifications, building responsive UIs, orchestrating the entire application, handling data storage, and finally, defining the very structure of our data. We hope this guide has given you a solid understanding of how the different parts of Kurinji Apartments work together to create a powerful and reliable application!
 
 ---
 
